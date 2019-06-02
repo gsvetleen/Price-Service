@@ -43,3 +43,6 @@ class Item:
             "tag_name": self.tag_name,
             "query": self.query
         }
+
+    def save_to_mongo(self):
+        Database.insert(self.collection, self.json())
